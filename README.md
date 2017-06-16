@@ -25,7 +25,7 @@ str[str.startIndex...str.index(str.startIndex, offsetBy:4)]
 str[str.index(str.startIndex, offsetBy:6)..<str.endIndex]
 ````
 ## Replacing Substrings
-The same simplified integer ranges can be used in the replacement methods. Here the Kanji '休' is replaced with it's pronunciation 'やす'.
+The same simplified integer ranges can be used in the replacement methods. Here the Kanji '休' is replaced with its pronunciation 'やす'.
 ````swift
 var ms0 = "お休みなさい"
 let hiragana: [Character] = [ "や", "す" ]
