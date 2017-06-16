@@ -16,7 +16,11 @@ extension String {
     public typealias SubstringType = String
     public typealias IndexType = String.CharacterView.Index
     #endif
-    
+    /// Converts a plain ol' integer index into a `String.IndexType`.
+    ///
+    /// - parameters:
+    ///   - i: a zero-based character index into this string.
+    ///   - returns: a String.IndexType for the same character position.
     public func index(_ i: Int) -> IndexType {
         return self.index(self.startIndex, offsetBy: i)
     }
@@ -36,15 +40,12 @@ extension CountableClosedRange where Bound == Int {
     }
 }
 
-
-
 extension String {
 
 //    public func index<I:FixedWidthInteger>(_ i: I) -> IndexType {
 //        return self.index(self.startIndex, offsetBy: Int(i))
 //    }
-
-
+    
     // MARK: - Inserting Characters
     
     /// Inserts a new element at a given index in this string.
@@ -56,49 +57,68 @@ extension String {
         self.insert(newElement, at: self.index(i))
     }
     
+    
+    #if swift(>=4)
     /// Inserts the contents of sequence at a given index in this string.
     /// - Parameters:
     ///     - newElement: the character to be added
     ///     - i: an index into the string 0 <= i <= self.count
     ///
-    #if swift(>=4)
     public mutating func insert<S>(contentsOf: S, at i: Int) where S:Collection, S.Element == Character {
         self.insert(contentsOf: contentsOf, at: self.index(i))
     }
     #else
+    /// Inserts the contents of sequence at a given index in this string.
+    /// - Parameters:
+    ///     - newElement: the character to be added
+    ///     - i: an index into the string 0 <= i <= self.count
+    ///
     public mutating func insert<S>(contentsOf: S, at i: Int) where S:Collection, S.Iterator.Element == Character {
         self.insert(contentsOf: contentsOf, at: self.index(i))
     }
     #endif
+    
+    #if swift(>=4)
     // MARK: - Replacing Substrings
     /// Replaces a range of characters in this string with a given sequence.
     /// - Parameters:
     ///     - subrange: the range of characters to be replaced
     ///     - newElements: the replacement sequence
     ///
-    #if swift(>=4)
     public mutating func replaceSubrange<C>(
         _ subrange: CountableRange<Int>, with newElements:C)
     where C : Collection, Character == C.Element {
         replaceSubrange(subrange.relative(to: self), with: newElements)
     }
     #else
+    // MARK: - Replacing Substrings
+    /// Replaces a range of characters in this string with a given sequence.
+    /// - Parameters:
+    ///     - subrange: the range of characters to be replaced
+    ///     - newElements: the replacement sequence
+    ///
     public mutating func replaceSubrange<C>(_ subrange: CountableRange<Int>, with newElements:C)
         where C : Collection, Character == C.Iterator.Element {
         replaceSubrange(subrange.relative(to: self), with: newElements)
     }
     #endif
+    
+    #if swift(>=4)
     /// Replaces a closed range of characters in this string with a given sequence.
     /// - Parameters:
     ///     - subrange: the range of characters to be replaced
     ///     - newElements: the replacement sequence
     ///
-    #if swift(>=4)
     public mutating func replaceSubrange<C>(_ subrange: CountableClosedRange<Int>, with newElements:C)
         where C : Collection, Character == C.Element {
         return replaceSubrange(subrange.relative(to: self), with: newElements)
     }
     #else
+    /// Replaces a closed range of characters in this string with a given sequence.
+    /// - Parameters:
+    ///     - subrange: the range of characters to be replaced
+    ///     - newElements: the replacement sequence
+    ///
     public mutating func replaceSubrange<C>(_ subrange: CountableClosedRange<Int>, with newElements:C)
         where C : Collection, Character == C.Iterator.Element {
         return replaceSubrange(subrange.relative(to: self), with: newElements)
@@ -113,11 +133,15 @@ extension String {
     @discardableResult public mutating func remove(at: Int) -> Character {
         return remove(at: self.index(at))
     }
-    
+    /// Removes a closed range of characters from this string
+    /// - Parameters:
+    /// - subrange: the index of the character to be removed
     public mutating func removeSubrange(_ subrange: CountableClosedRange<Int>) {
             return removeSubrange(subrange.relative(to: self))
     }
-    
+    /// Removes a range of characters from this string
+    /// - Parameters:
+    /// - subrange: the index of the character to be removed
     public mutating func removeSubrange(_ subrange: CountableRange<Int>) {
             return removeSubrange(subrange.relative(to: self))
     }

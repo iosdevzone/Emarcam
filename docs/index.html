@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Emarcam  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Emarcam  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Emarcam Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Emarcam Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Emarcam  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='emarcam' class='heading'>Emarcam</h1>
+<h2 id='getting-started' class='heading'>Getting started</h2>
+
+<p>Assuming you have integrated <code>Emarcam</code> into your project using your preferred method (CococaPods, Carthage, Swift Package Manager or manually), just import the module at the top of your file.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Emarcam</span>
+</code></pre>
+<h2 id='subscripting' class='heading'>Subscripting</h2>
+
+<p><code>Emarcam</code> greatly simplifies subscripting strings by allowing you to use <code>Int</code>s as indices. For example:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">str</span> <span class="o">=</span> <span class="s">"Hello, playground!"</span>
+<span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// "H"</span>
+<span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">// "e"</span>
+<span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="o">..&lt;</span><span class="mi">4</span><span class="p">]</span> <span class="c1">// "Hell"</span>
+<span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="o">...</span><span class="mi">4</span><span class="p">]</span> <span class="c1">// "Hello"</span>
+<span class="n">str</span><span class="p">[</span><span class="mi">6</span><span class="o">..&lt;</span><span class="n">str</span><span class="o">.</span><span class="n">count</span><span class="p">]</span> <span class="c1">// " playground!"</span>
+</code></pre>
+
+<p>Compare this to the same expressions in Swift 4.</p>
+<pre class="highlight swift"><code><span class="n">str</span><span class="p">[</span><span class="n">str</span><span class="o">.</span><span class="n">startIndex</span><span class="p">]</span>
+<span class="n">str</span><span class="p">[</span><span class="n">str</span><span class="o">.</span><span class="nf">index</span><span class="p">(</span><span class="nv">after</span><span class="p">:</span> <span class="n">str</span><span class="o">.</span><span class="n">startIndex</span><span class="p">)]</span>
+<span class="n">str</span><span class="p">[</span><span class="n">str</span><span class="o">.</span><span class="n">startIndex</span><span class="o">..&lt;</span><span class="n">str</span><span class="o">.</span><span class="nf">index</span><span class="p">(</span><span class="n">str</span><span class="o">.</span><span class="n">startIndex</span><span class="p">,</span> <span class="nv">offsetBy</span><span class="p">:</span><span class="mi">4</span><span class="p">)]</span>
+<span class="n">str</span><span class="p">[</span><span class="n">str</span><span class="o">.</span><span class="n">startIndex</span><span class="o">...</span><span class="n">str</span><span class="o">.</span><span class="nf">index</span><span class="p">(</span><span class="n">str</span><span class="o">.</span><span class="n">startIndex</span><span class="p">,</span> <span class="nv">offsetBy</span><span class="p">:</span><span class="mi">4</span><span class="p">)]</span>
+<span class="n">str</span><span class="p">[</span><span class="n">str</span><span class="o">.</span><span class="nf">index</span><span class="p">(</span><span class="n">str</span><span class="o">.</span><span class="n">startIndex</span><span class="p">,</span> <span class="nv">offsetBy</span><span class="p">:</span><span class="mi">6</span><span class="p">)</span><span class="o">..&lt;</span><span class="n">str</span><span class="o">.</span><span class="n">endIndex</span><span class="p">]</span>
+</code></pre>
+<h2 id='replacing-substrings' class='heading'>Replacing Substrings</h2>
+
+<p>The same simplified integer ranges can be used in the replacement methods. Here the Kanji &lsquo;休&rsquo; is replaced with its pronunciation &lsquo;やす&rsquo;.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ms0</span> <span class="o">=</span> <span class="s">"お休みなさい"</span>
+<span class="k">let</span> <span class="nv">hiragana</span><span class="p">:</span> <span class="p">[</span><span class="kt">Character</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span> <span class="s">"や"</span><span class="p">,</span> <span class="s">"す"</span> <span class="p">]</span>
+<span class="n">ms0</span><span class="o">.</span><span class="nf">replaceSubrange</span><span class="p">(</span><span class="mi">1</span><span class="o">..&lt;</span><span class="mi">2</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="n">hiragana</span><span class="p">)</span>
+<span class="c1">// おやすみなさい</span>
+</code></pre>
+<h2 id='removing-substrings' class='heading'>Removing Substrings</h2>
+
+<p>Removal of substrings is also a happier experience.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ms1</span> <span class="o">=</span> <span class="s">"😭☠️☠️😀💀😀☠️☠️😡"</span>
+<span class="n">ms1</span><span class="o">.</span><span class="nf">removeSubrange</span><span class="p">(</span><span class="mi">0</span><span class="o">...</span><span class="mi">2</span><span class="p">)</span>          <span class="c1">// ms1 = "😀💀😀☠️☠️😡"</span>
+<span class="n">ms1</span><span class="o">.</span><span class="nf">remove</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>                  <span class="c1">// returns '💀' and ms1 = "😀😀☠️☠️😡"</span>
+<span class="n">ms1</span><span class="o">.</span><span class="nf">removeSubrange</span><span class="p">(</span><span class="mi">2</span><span class="o">..&lt;</span><span class="n">ms1</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>  <span class="c1">// ms1 = ""😀😀"</span>
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://github.com/iosdevzone/Emarcam" target="_blank" rel="external">idz</a>. All rights reserved. (Last updated: 2017-06-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
