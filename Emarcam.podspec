@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Emarcam"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "An attempt to undo some of the knots in Swift `String`s."
 
   # This description is used to generate tags and improve search results.
@@ -66,5 +66,5 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files  = "Emarcam/*.swift"
+  s.source_files  = "Sources/*.swift"
 end
