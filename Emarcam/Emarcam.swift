@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 extension String {
     #if swift(>=4)
     public typealias SubstringType = Substring
@@ -116,9 +114,15 @@ extension String {
         return remove(at: self.index(at))
     }
     
-    #if !swift(>=4)
-
+    public mutating func removeSubrange(_ subrange: CountableClosedRange<Int>) {
+            return removeSubrange(subrange.relative(to: self))
+    }
     
+    public mutating func removeSubrange(_ subrange: CountableRange<Int>) {
+            return removeSubrange(subrange.relative(to: self))
+    }
+    
+    #if !swift(>=4)
     @discardableResult public mutating func removeFirst() -> Character {
         return self.remove(at: self.startIndex)
     }
