@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		304CA4CD1EF212BB006E26B0 /* Emarcam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304CA4C31EF212BB006E26B0 /* Emarcam.framework */; };
-		304CA4D21EF212BB006E26B0 /* EmarcamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304CA4D11EF212BB006E26B0 /* EmarcamTests.swift */; };
 		3095C14D1EF3BF6D00C3F3AB /* Emarcam.h in Headers */ = {isa = PBXBuildFile; fileRef = 3095C14A1EF3BF6700C3F3AB /* Emarcam.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3095C14E1EF3BF7200C3F3AB /* Emarcam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095C14B1EF3BF6700C3F3AB /* Emarcam.swift */; };
 /* End PBXBuildFile section */
@@ -26,11 +25,11 @@
 /* Begin PBXFileReference section */
 		304CA4C31EF212BB006E26B0 /* Emarcam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Emarcam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		304CA4CC1EF212BB006E26B0 /* EmarcamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmarcamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		304CA4D11EF212BB006E26B0 /* EmarcamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmarcamTests.swift; sourceTree = "<group>"; };
-		304CA4D31EF212BB006E26B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3095C14A1EF3BF6700C3F3AB /* Emarcam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Emarcam.h; sourceTree = "<group>"; };
 		3095C14B1EF3BF6700C3F3AB /* Emarcam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emarcam.swift; sourceTree = "<group>"; };
 		3095C14C1EF3BF6700C3F3AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30B654F51EF3C9FA00011E4C /* EmarcamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmarcamTests.swift; path = Tests/EmarcamTests/EmarcamTests.swift; sourceTree = SOURCE_ROOT; };
+		30EE366E1EF3C2E100B7A964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +72,8 @@
 		304CA4D01EF212BB006E26B0 /* EmarcamTests */ = {
 			isa = PBXGroup;
 			children = (
-				304CA4D11EF212BB006E26B0 /* EmarcamTests.swift */,
-				304CA4D31EF212BB006E26B0 /* Info.plist */,
+				30B654F51EF3C9FA00011E4C /* EmarcamTests.swift */,
+				30EE366E1EF3C2E100B7A964 /* Info.plist */,
 			);
 			path = EmarcamTests;
 			sourceTree = "<group>";
@@ -240,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				304CA4D21EF212BB006E26B0 /* EmarcamTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GEA92R6RK9;
@@ -431,6 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdeveloperzone.Emarcam.EmarcamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
@@ -441,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GEA92R6RK9;
 				INFOPLIST_FILE = EmarcamTests/Info.plist;
