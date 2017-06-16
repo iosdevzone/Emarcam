@@ -26,19 +26,19 @@ extension String {
     }
 }
 
-// Xcode 8/Swift 3 could not use :FixedWidthInteger
-extension CountableRange where Bound == Int {
-    func relative(to s: String) -> Range<String.IndexType> {
-        return s.index(self.lowerBound)..<s.index(self.upperBound)
-    }
-}
-
-// Xcode 8/ Swift 3 could not use :FixedWidthInteger
-extension CountableClosedRange where Bound == Int {
-    func relative(to s: String) -> ClosedRange<String.IndexType> {
-        return s.index(self.lowerBound)...s.index(self.upperBound)
-    }
-}
+//// Xcode 8/Swift 3 could not use :FixedWidthInteger
+//extension CountableRange where Bound == Int {
+//    func relative(to s: String) -> Range<String.IndexType> {
+//        return s.index(self.lowerBound)..<s.index(self.upperBound)
+//    }
+//}
+//
+//// Xcode 8/ Swift 3 could not use :FixedWidthInteger
+//extension CountableClosedRange where Bound == Int {
+//    func relative(to s: String) -> ClosedRange<String.IndexType> {
+//        return s.index(self.lowerBound)...s.index(self.upperBound)
+//    }
+//}
 
 extension String {
 
@@ -99,7 +99,7 @@ extension String {
     ///
     public mutating func replaceSubrange<C>(_ subrange: CountableRange<Int>, with newElements:C)
         where C : Collection, Character == C.Iterator.Element {
-        replaceSubrange(subrange.relative(to: self), with: newElements)
+        replaceSubrange(self.index(subrange.lowerBound)..<self.index(subrange.upperBound), with: newElements)
     }
     #endif
     
@@ -121,7 +121,7 @@ extension String {
     ///
     public mutating func replaceSubrange<C>(_ subrange: CountableClosedRange<Int>, with newElements:C)
         where C : Collection, Character == C.Iterator.Element {
-        return replaceSubrange(subrange.relative(to: self), with: newElements)
+        return replaceSubrange(self.index(subrange.lowerBound)...self.index(subrange.upperBound), with: newElements)
     }
     #endif
     
@@ -137,13 +137,13 @@ extension String {
     /// - Parameters:
     /// - subrange: the index of the character to be removed
     public mutating func removeSubrange(_ subrange: CountableClosedRange<Int>) {
-            return removeSubrange(subrange.relative(to: self))
+            return removeSubrange(self.index(subrange.lowerBound)...self.index(subrange.upperBound))
     }
     /// Removes a range of characters from this string
     /// - Parameters:
     /// - subrange: the index of the character to be removed
     public mutating func removeSubrange(_ subrange: CountableRange<Int>) {
-            return removeSubrange(subrange.relative(to: self))
+            return removeSubrange(self.index(subrange.lowerBound)..<self.index(subrange.upperBound))
     }
     
     #if !swift(>=4)
@@ -151,12 +151,20 @@ extension String {
         return self.remove(at: self.startIndex)
     }
     
-    /// Removes a number of characters from this string.
+    /// Removes a number of characters from the beginning of this string.
     /// - Parameters:
     ///     - n: the number of characters to remove
     public mutating func removeFirst(_ n: Int) {
         let r = 0..<n
-        self.removeSubrange(r.relative(to: self))
+        self.removeSubrange(self.index(r.lowerBound)..<self.index(r.upperBound))
+    }
+    
+    /// Removes a number of characters from the end of this string.
+    /// - Parameters:
+    ///     - n: the number of characters to remove
+    public mutating func removeLast(_ n: Int) {
+        let r = (self.count - n)..<self.count
+        self.removeSubrange(self.index(r.lowerBound)..<self.index(r.upperBound))
     }
     
     /// Removes the last character from this string.
@@ -166,6 +174,10 @@ extension String {
         let last = self[lastIndex]
         self.remove(at: lastIndex)
         return last
+    }
+        
+    public var count: Int {
+        return self.characters.count
     }
     
     public func characterCount() -> Int {
@@ -195,11 +207,11 @@ extension String {
     }
     
     public subscript(bounds: CountableClosedRange<Int>) -> SubstringType {
-        return self[bounds.relative(to: self)]
+        return self[self.index(bounds.lowerBound)...self.index(bounds.upperBound)]
     }
     
     public subscript(bounds: CountableRange<Int>) -> SubstringType {
-        return self[bounds.relative(to: self)]
+        return self[self.index(bounds.lowerBound)..<self.index(bounds.upperBound)]
     }
     
     // MARK: - Swift 4 partial ranges

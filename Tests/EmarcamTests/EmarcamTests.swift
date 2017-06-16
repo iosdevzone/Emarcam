@@ -16,7 +16,12 @@ class EmarcamTests: XCTestCase {
         "おやすみなさい",
         "🇮🇪🇯🇵"]
     let insertion: Character = "🇺🇸"
+    
+    #if swift(>=4)
     let sequence: [Character] = "내 호버크라프트는 뱀장어로 가득하다.".map { $0 }
+    #else
+    let sequence: [Character] = "내 호버크라프트는 뱀장어로 가득하다.".characters.map { $0 }
+    #endif
     
     override func setUp() {
         super.setUp()
