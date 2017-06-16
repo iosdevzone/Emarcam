@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Emarcam"
-  s.version      = "0.0.2"
+  s.version      = "0.1.0"
   s.summary      = "An attempt to undo some of the knots in Swift `String`s."
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-		   Emarcam provides a simplified API for Swift strings.
+		   Emarcam provides a simplified API for Swift strings. Essentially it allows the use of plain old integer ranges anywhere that the Stnadard library expects a `Range<String.Index>`.
                    DESC
 
   s.homepage     = "https://github.com/iosdevzone/Emarcam"
@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   s.author             = { "idz" => "idz@iosdeveloperzone.com" }
-  s.social_media_url   = "http://twitter.com/iosdevzone"
+  s.social_media_url   = "https://twitter.com/iosdevzone"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.ios.deployment_target = "9.0"
