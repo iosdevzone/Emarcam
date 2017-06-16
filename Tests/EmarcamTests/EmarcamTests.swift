@@ -11,6 +11,25 @@ import XCTest
 
 class EmarcamTests: XCTestCase {
     
+    static var allTests = { 
+	    return [
+	    ("testCharacterInsertion",testCharacterInsertion),
+	    ("testSequenceInsertion",testSequenceInsertion),
+	    ("testCountableRangeReplacement",testCountableRangeReplacement),
+	    ("testRemoveAt",testRemoveAt),
+	    ("testRemoveFirstN",testRemoveFirstN),
+	    ("testRemoveLastN",testRemoveLastN),
+	    ("testDropFirstN",testDropFirstN),
+	    ("testDropLastN",testDropLastN),
+	    ("testIndex",testIndex),
+	    ("testCountableClosedRange",testCountableClosedRange),
+	    ("testCountableRange",testCountableRange),
+//	    ("testPartialRangeUpTo",testPartialRangeUpTo),
+//	    ("testPartialRangeUpThrough",testPartialRangeUpThrough),
+//	    ("testPartialRangeFrom",testPartialRangeFrom)
+	    ]
+
+	}()
     let testStrings = [
         "The quick brown fox jumped over the lazy dog.",
         "おやすみなさい",
