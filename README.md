@@ -25,17 +25,18 @@ str[str.startIndex...str.index(str.startIndex, offsetBy:4)]
 str[str.index(str.startIndex, offsetBy:6)..<str.endIndex]
 ````
 ## Replacing Substrings
-The same simplified integer ranges can be used in the replacement methods.
+The same simplified integer ranges can be used in the replacement methods. Here the Kanji '休' is replaced with it's pronunciation 'やす'.
 ````swift
 var ms0 = "お休みなさい"
 let hiragana: [Character] = [ "や", "す" ]
 ms0.replaceSubrange(1..<2, with: hiragana)
+// おやすみなさい
 ````
 ## Removing Substrings
 Removal of substrings is also a happier experience.
 ````swift
 var ms1 = "😭☠️☠️😀💀😀☠️☠️😡"
-ms1.removeSubrange(0...2)
-ms1.remove(at: 1)
-ms1.removeSubrange(2..<ms1.count)
+ms1.removeSubrange(0...2)          // ms1 = "😀💀😀☠️☠️😡"
+ms1.remove(at: 1)                  // returns '💀' and ms1 = "😀😀☠️☠️😡"
+ms1.removeSubrange(2..<ms1.count)  // ms1 = ""😀😀"
 ````
