@@ -55,9 +55,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SS7EmarcamE5indexSS13CharacterViewV5IndexVSiF"></a>
+                    <a name="/s:FE7EmarcamSS5indexFSiVVSS13CharacterView5Index"></a>
                     <a name="//apple_ref/swift/Method/index(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS7EmarcamE5indexSS13CharacterViewV5IndexVSiF">index(_:)</a>
+                    <a class="token" href="#/s:FE7EmarcamSS5indexFSiVVSS13CharacterView5Index">index(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -75,6 +75,37 @@
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexType</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>i</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a zero-based character index into this string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>returns</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -97,9 +128,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SS7EmarcamE6insertys9CharacterV_Si2attF"></a>
+                    <a name="/s:FE7EmarcamSS6insertFTVs9Character2atSi_T_"></a>
                     <a name="//apple_ref/swift/Method/insert(_:at:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS7EmarcamE6insertys9CharacterV_Si2attF">insert(_:at:)</a>
+                    <a class="token" href="#/s:FE7EmarcamSS6insertFTVs9Character2atSi_T_">insert(_:at:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -118,15 +149,46 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newElement</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the character to be added</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>i</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an index into the string 0 &lt;= i &lt;= self.count</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SS7EmarcamE6insertyx10contentsOf_Si2atts10CollectionRzs9CharacterV7ElementRtzlF"></a>
+                    <a name="/s:FE7EmarcamSS6insertuRxs10CollectionWx8Iterator7Element_zVs9CharacterrFT10contentsOfx2atSi_T_"></a>
                     <a name="//apple_ref/swift/Method/insert(contentsOf:at:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS7EmarcamE6insertyx10contentsOf_Si2atts10CollectionRzs9CharacterV7ElementRtzlF">insert(contentsOf:at:)</a>
+                    <a class="token" href="#/s:FE7EmarcamSS6insertuRxs10CollectionWx8Iterator7Element_zVs9CharacterrFT10contentsOfx2atSi_T_">insert(contentsOf:at:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -141,9 +203,40 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="n">insert</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">at</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">S</span><span class="p">:</span><span class="kt">Collection</span><span class="p">,</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Character</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="n">insert</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">at</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">where</span> <span class="kt">S</span><span class="p">:</span><span class="kt">Collection</span><span class="p">,</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Iterator</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Character</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newElement</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the character to be added</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>i</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an index into the string 0 &lt;= i &lt;= self.count</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -162,9 +255,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SS7EmarcamE15replaceSubrangeys14CountableRangeVySiG_x4withts10CollectionRzs9CharacterV7ElementRtzlF"></a>
+                    <a name="/s:FE7EmarcamSS15replaceSubrangeuRxs10CollectionWx8Iterator7Element_zVs9CharacterrFTGVs14CountableRangeSi_4withx_T_"></a>
                     <a name="//apple_ref/swift/Method/replaceSubrange(_:with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS7EmarcamE15replaceSubrangeys14CountableRangeVySiG_x4withts10CollectionRzs9CharacterV7ElementRtzlF">replaceSubrange(_:with:)</a>
+                    <a class="token" href="#/s:FE7EmarcamSS15replaceSubrangeuRxs10CollectionWx8Iterator7Element_zVs9CharacterrFTGVs14CountableRangeSi_4withx_T_">replaceSubrange(_:with:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -179,32 +272,51 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="n">replaceSubrange</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">subrange</span><span class="p">:</span> <span class="kt">CountableRange</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">newElements</span><span class="p">:</span><span class="kt">C</span><span class="p">)</span>
-    <span class="k">where</span> <span class="kt">C</span> <span class="p">:</span> <span class="kt">Collection</span><span class="p">,</span> <span class="kt">Character</span> <span class="o">==</span> <span class="kt">C</span><span class="o">.</span><span class="kt">Element</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="n">replaceSubrange</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">subrange</span><span class="p">:</span> <span class="kt">CountableRange</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">newElements</span><span class="p">:</span><span class="kt">C</span><span class="p">)</span>
+        <span class="k">where</span> <span class="kt">C</span> <span class="p">:</span> <span class="kt">Collection</span><span class="p">,</span> <span class="kt">Character</span> <span class="o">==</span> <span class="kt">C</span><span class="o">.</span><span class="kt">Iterator</span><span class="o">.</span><span class="kt">Element</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subrange</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the range of characters to be replaced</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newElements</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the replacement sequence</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Replacing%20Substrings2"></a>
-                <a name="//apple_ref/swift/Section/Replacing Substrings" class="dashAnchor"></a>
-                <a href="#/Replacing%20Substrings2">
-                  <h3 class="section-name">Replacing Substrings</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SS7EmarcamE15replaceSubrangeys20CountableClosedRangeVySiG_x4withts10CollectionRzs9CharacterV7ElementRtzlF"></a>
+                    <a name="/s:FE7EmarcamSS15replaceSubrangeuRxs10CollectionWx8Iterator7Element_zVs9CharacterrFTGVs20CountableClosedRangeSi_4withx_T_"></a>
                     <a name="//apple_ref/swift/Method/replaceSubrange(_:with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS7EmarcamE15replaceSubrangeys20CountableClosedRangeVySiG_x4withts10CollectionRzs9CharacterV7ElementRtzlF">replaceSubrange(_:with:)</a>
+                    <a class="token" href="#/s:FE7EmarcamSS15replaceSubrangeuRxs10CollectionWx8Iterator7Element_zVs9CharacterrFTGVs20CountableClosedRangeSi_4withx_T_">replaceSubrange(_:with:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -220,9 +332,40 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="n">replaceSubrange</span><span class="o">&lt;</span><span class="kt">C</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">subrange</span><span class="p">:</span> <span class="kt">CountableClosedRange</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">newElements</span><span class="p">:</span><span class="kt">C</span><span class="p">)</span>
-        <span class="k">where</span> <span class="kt">C</span> <span class="p">:</span> <span class="kt">Collection</span><span class="p">,</span> <span class="kt">Character</span> <span class="o">==</span> <span class="kt">C</span><span class="o">.</span><span class="kt">Element</span></code></pre>
+        <span class="k">where</span> <span class="kt">C</span> <span class="p">:</span> <span class="kt">Collection</span><span class="p">,</span> <span class="kt">Character</span> <span class="o">==</span> <span class="kt">C</span><span class="o">.</span><span class="kt">Iterator</span><span class="o">.</span><span class="kt">Element</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subrange</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the range of characters to be replaced</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newElements</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the replacement sequence</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -241,9 +384,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SS7EmarcamE6removes9CharacterVSi2at_tF"></a>
+                    <a name="/s:FE7EmarcamSS6removeFT2atSi_Vs9Character"></a>
                     <a name="//apple_ref/swift/Method/remove(at:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS7EmarcamE6removes9CharacterVSi2at_tF">remove(at:)</a>
+                    <a class="token" href="#/s:FE7EmarcamSS6removeFT2atSi_Vs9Character">remove(at:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -276,9 +419,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SS7EmarcamE14removeSubrangeys20CountableClosedRangeVySiGF"></a>
+                    <a name="/s:FE7EmarcamSS14removeSubrangeFGVs20CountableClosedRangeSi_T_"></a>
                     <a name="//apple_ref/swift/Method/removeSubrange(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS7EmarcamE14removeSubrangeys20CountableClosedRangeVySiGF">removeSubrange(_:)</a>
+                    <a class="token" href="#/s:FE7EmarcamSS14removeSubrangeFGVs20CountableClosedRangeSi_T_">removeSubrange(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -307,9 +450,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:SS7EmarcamE14removeSubrangeys14CountableRangeVySiGF"></a>
+                    <a name="/s:FE7EmarcamSS14removeSubrangeFGVs14CountableRangeSi_T_"></a>
                     <a name="//apple_ref/swift/Method/removeSubrange(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:SS7EmarcamE14removeSubrangeys14CountableRangeVySiGF">removeSubrange(_:)</a>
+                    <a class="token" href="#/s:FE7EmarcamSS14removeSubrangeFGVs14CountableRangeSi_T_">removeSubrange(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -331,6 +474,374 @@
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeSubrange</span><span class="p">(</span><span class="n">_</span> <span class="nv">subrange</span><span class="p">:</span> <span class="kt">CountableRange</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Utility%20(Backported)"></a>
+                <a name="//apple_ref/swift/Section/Utility (Backported)" class="dashAnchor"></a>
+                <a href="#/Utility%20(Backported)">
+                  <h3 class="section-name">Utility (Backported)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7EmarcamSS5countSi"></a>
+                    <a name="//apple_ref/swift/Property/count" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7EmarcamSS5countSi">count</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of characters in this string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Mutating%20Removal%20(Backported)"></a>
+                <a name="//apple_ref/swift/Section/Mutating Removal (Backported)" class="dashAnchor"></a>
+                <a href="#/Mutating%20Removal%20(Backported)">
+                  <h3 class="section-name">Mutating Removal (Backported)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7EmarcamSS11removeFirstFT_Vs9Character"></a>
+                    <a name="//apple_ref/swift/Method/removeFirst()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7EmarcamSS11removeFirstFT_Vs9Character">removeFirst()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes and returns the first character of this string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@discardableResult</span> <span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeFirst</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Character</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the removed character.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7EmarcamSS11removeFirstFSiT_"></a>
+                    <a name="//apple_ref/swift/Method/removeFirst(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7EmarcamSS11removeFirstFSiT_">removeFirst(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes a number of characters from the beginning of this string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeFirst</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>n</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the number of characters to remove</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7EmarcamSS10removeLastFSiT_"></a>
+                    <a name="//apple_ref/swift/Method/removeLast(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7EmarcamSS10removeLastFSiT_">removeLast(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes a number of characters from the end of this string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeLast</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>n</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the number of characters to remove</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7EmarcamSS10removeLastFT_Vs9Character"></a>
+                    <a name="//apple_ref/swift/Method/removeLast()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7EmarcamSS10removeLastFT_Vs9Character">removeLast()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the last character from this string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@discardableResult</span> <span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeLast</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Character</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the removed character</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Non-mutating%20Removal%20(Backported)"></a>
+                <a name="//apple_ref/swift/Section/Non-mutating Removal (Backported)" class="dashAnchor"></a>
+                <a href="#/Non-mutating%20Removal%20(Backported)">
+                  <h3 class="section-name">Non-mutating Removal (Backported)</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7EmarcamSS9dropFirstFT_SS"></a>
+                    <a name="//apple_ref/swift/Method/dropFirst()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7EmarcamSS9dropFirstFT_SS">dropFirst()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the string obtained by removing the first character of this string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dropFirst</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">SubstringType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the substring of characters after the first character.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7EmarcamSS9dropFirstFSiSS"></a>
+                    <a name="//apple_ref/swift/Method/dropFirst(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7EmarcamSS9dropFirstFSiSS">dropFirst(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the string obtained by removing the first <code>n</code> characters of this string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dropFirst</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SubstringType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>n</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the number of characters to remove.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7EmarcamSS8dropLastFT_SS"></a>
+                    <a name="//apple_ref/swift/Method/dropLast()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7EmarcamSS8dropLastFT_SS">dropLast()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the string obtained by removing the last character of this string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dropLast</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">SubstringType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the substring of characters containing all but the last.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7EmarcamSS8dropLastFSiSS"></a>
+                    <a name="//apple_ref/swift/Method/dropLast(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7EmarcamSS8dropLastFSiSS">dropLast(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the string obtained by removing the last <code>n</code> characters of this string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dropLast</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SubstringType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>n</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the number of characters to remove.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

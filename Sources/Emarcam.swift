@@ -146,7 +146,48 @@ extension String {
             return removeSubrange(self.index(subrange.lowerBound)..<self.index(subrange.upperBound))
     }
     
+
+
+    // MARK: - Subcripting
+    public subscript(index: Int) -> Character {
+        return self[self.index(index)]
+    }
+    
+    public subscript(bounds: CountableClosedRange<Int>) -> SubstringType {
+        return self[self.index(bounds.lowerBound)...self.index(bounds.upperBound)]
+    }
+    
+    public subscript(bounds: CountableRange<Int>) -> SubstringType {
+        return self[self.index(bounds.lowerBound)..<self.index(bounds.upperBound)]
+    }
+    
+    
+    #if swift(>=4)
+    // MARK: - Swift 4 partial ranges
+    public subscript(bounds: PartialRangeUpTo<Int>) -> Substring {
+        return self[..<self.index(bounds.upperBound)]
+    }
+    
+    public subscript(bounds: PartialRangeThrough<Int>) -> Substring {
+        return self[...self.index(bounds.upperBound)]
+    }
+    
+    public subscript(bounds: PartialRangeFrom<Int>) -> Substring {
+        return self[self.index(bounds.lowerBound)...]
+    }
+    #endif
+    
+    
     #if !swift(>=4)
+    // MARK: - Utility (Backported)
+    /// The number of characters in this string.
+    public var count: Int {
+        return self.characters.count
+    }
+    
+    // MARK: - Mutating Removal (Backported)
+    /// Removes and returns the first character of this string.
+    /// - returns: the removed character.
     @discardableResult public mutating func removeFirst() -> Character {
         return self.remove(at: self.startIndex)
     }
@@ -175,57 +216,31 @@ extension String {
         self.remove(at: lastIndex)
         return last
     }
-        
-    public var count: Int {
-        return self.characters.count
-    }
     
-    public func characterCount() -> Int {
-        return self.characters.count
-    }
-    
+    // MARK: - Non-mutating Removal (Backported)
+    /// Returns the string obtained by removing the first character of this string
+    /// - Returns: the substring of characters after the first character.
     public func dropFirst() -> SubstringType {
-        return self[1..<self.characterCount()]
+        return self[1..<self.count]
     }
-    
+    /// Returns the string obtained by removing the first `n` characters of this string.
+    /// - Parameters:
+    ///   - n: the number of characters to remove.
+    ///   - - Returns: the substring of characters after the first `n` character.
     public func dropFirst(_ n: Int) -> SubstringType {
-        return self[n..<self.characterCount()]
+        return self[n..<self.count]
     }
-    
+    /// Returns the string obtained by removing the last character of this string
+    /// - Returns: the substring of characters containing all but the last.
     public func dropLast() -> SubstringType {
-        return self[0..<(self.characterCount()-1)]
+        return self[0..<(self.count-1)]
     }
-    
+    /// Returns the string obtained by removing the last `n` characters of this string.
+    /// - Parameters:
+    ///   - n: the number of characters to remove.
+    ///   - - Returns: the substring of characters before the last `n` character.
     public func dropLast(_ n: Int) -> SubstringType {
-        return self[0..<(self.characterCount()-n)]
-    }
-    #endif
-
-    // MARK: - Subcripting
-    public subscript(index: Int) -> Character {
-        return self[self.index(index)]
-    }
-    
-    public subscript(bounds: CountableClosedRange<Int>) -> SubstringType {
-        return self[self.index(bounds.lowerBound)...self.index(bounds.upperBound)]
-    }
-    
-    public subscript(bounds: CountableRange<Int>) -> SubstringType {
-        return self[self.index(bounds.lowerBound)..<self.index(bounds.upperBound)]
-    }
-    
-    // MARK: - Swift 4 partial ranges
-    #if swift(>=4)
-    public subscript(bounds: PartialRangeUpTo<Int>) -> Substring {
-        return self[..<self.index(bounds.upperBound)]
-    }
-    
-    public subscript(bounds: PartialRangeThrough<Int>) -> Substring {
-        return self[...self.index(bounds.upperBound)]
-    }
-    
-    public subscript(bounds: PartialRangeFrom<Int>) -> Substring {
-        return self[self.index(bounds.lowerBound)...]
+        return self[0..<(self.count-n)]
     }
     #endif
 }

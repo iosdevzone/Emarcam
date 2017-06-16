@@ -1,6 +1,33 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/danny/Documents/GitHub/Emarcam/Sources/Emarcam.swift",
+      "line": 220,
+      "symbol": "String.dropFirst()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/danny/Documents/GitHub/Emarcam/Sources/Emarcam.swift",
+      "line": 224,
+      "symbol": "String.dropFirst(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/danny/Documents/GitHub/Emarcam/Sources/Emarcam.swift",
+      "line": 228,
+      "symbol": "String.dropLast()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/danny/Documents/GitHub/Emarcam/Sources/Emarcam.swift",
+      "line": 232,
+      "symbol": "String.dropLast(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/danny/Documents/GitHub/Emarcam"
 }
