@@ -10,6 +10,7 @@
 		304CA4CD1EF212BB006E26B0 /* Emarcam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304CA4C31EF212BB006E26B0 /* Emarcam.framework */; };
 		3095C14D1EF3BF6D00C3F3AB /* Emarcam.h in Headers */ = {isa = PBXBuildFile; fileRef = 3095C14A1EF3BF6700C3F3AB /* Emarcam.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3095C14E1EF3BF7200C3F3AB /* Emarcam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095C14B1EF3BF6700C3F3AB /* Emarcam.swift */; };
+		30B128B21F00CD80009939D0 /* EmarcamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B654F51EF3C9FA00011E4C /* EmarcamTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B128B21F00CD80009939D0 /* EmarcamTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +383,7 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @loader_path/../Frameworks @executable_path/../Frameworks";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdeveloperzone.Emarcam;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -406,7 +408,7 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks @loader_path/../Frameworks @executable_path/../Frameworks";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdeveloperzone.Emarcam;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

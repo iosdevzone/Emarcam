@@ -88,7 +88,7 @@ extension String {
     public mutating func replaceSubrange<C>(
         _ subrange: CountableRange<Int>, with newElements:C)
     where C : Collection, Character == C.Element {
-        replaceSubrange(subrange.relative(to: self), with: newElements)
+        replaceSubrange(self.index(subrange.lowerBound)..<self.index(subrange.upperBound), with: newElements)
     }
     #else
     // MARK: - Replacing Substrings
@@ -111,7 +111,7 @@ extension String {
     ///
     public mutating func replaceSubrange<C>(_ subrange: CountableClosedRange<Int>, with newElements:C)
         where C : Collection, Character == C.Element {
-        return replaceSubrange(subrange.relative(to: self), with: newElements)
+        return replaceSubrange(self.index(subrange.lowerBound)...self.index(subrange.upperBound), with: newElements)
     }
     #else
     /// Replaces a closed range of characters in this string with a given sequence.
