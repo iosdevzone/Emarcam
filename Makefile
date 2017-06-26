@@ -11,3 +11,12 @@ spec_lint:
 trunk_push:
 	pod trunk push Emarcam.podspec
 
+test_swift_4:
+	sudo xcode-select -s /Applications/Xcode-beta.app
+	xcrun swift --version
+	xcodebuild -project Emarcam_Swift_4.xcodeproj -scheme Emarcam test | xcpretty
+
+test_swift_3:
+	sudo xcode-select -s /Applications/Xcode.app
+	xcrun swift --version
+	xcodebuild -project Emarcam_Swift_3.xcodeproj -scheme Emarcam -destination 'platform=OS X,arch=x86_64' test | xcpretty
