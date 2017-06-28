@@ -93,6 +93,16 @@ class EmarcamTests: XCTestCase {
         }
     }
     
+    func testCountableClosedRangeReplacement() {
+        rangeWrapper { (s, i, j) in
+            var ms1 = s
+            var ms2 = s
+            ms1.replaceSubrange(i...j, with: sequence)
+            ms2.replaceSubrange(s.index(s.startIndex, offsetBy: i)...s.index(s.startIndex, offsetBy: j), with: sequence)
+            XCTAssertEqual(ms1, ms2)
+        }
+    }
+    
     // MARK: - Removing Characters
     func testRemoveAt() {
         for s in testStrings {
@@ -107,6 +117,33 @@ class EmarcamTests: XCTestCase {
         }
     }
     
+    func testCountableRangeRemoval() {
+        rangeWrapper { (s, i, j) in
+            var ms1 = s
+            var ms2 = s
+            ms1.removeSubrange(i..<j)
+            ms2.removeSubrange(s.index(s.startIndex, offsetBy: i)..<s.index(s.startIndex, offsetBy: j))
+            XCTAssertEqual(ms1, ms2)
+        }
+    }
+    
+    func testCountableClosedRangeRemoval() {
+        rangeWrapper { (s, i, j) in
+            var ms1 = s
+            var ms2 = s
+            ms1.removeSubrange(i...j)
+            ms2.removeSubrange(s.index(s.startIndex, offsetBy: i)...s.index(s.startIndex, offsetBy: j))
+            XCTAssertEqual(ms1, ms2)
+        }
+    }
+    
+    func testRemoveFirst() {
+        var s = "123456"
+        let c = s.removeFirst()
+        XCTAssertEqual(c, Character("1"))
+        XCTAssertEqual(s, "23456")
+    }
+    
     func testRemoveFirstN() {
         var s = "123456"
         s.removeFirst(3)
@@ -117,6 +154,19 @@ class EmarcamTests: XCTestCase {
         var s = "123456"
         s.removeLast(3)
         XCTAssertEqual(s, "123")
+    }
+    
+    func testRemoveLast() {
+        var s = "123456"
+        let c = s.removeLast()
+        XCTAssertEqual(c, Character("6"))
+        XCTAssertEqual(s, "12345")
+    }
+    
+    func testDropFirst() {
+        let s = "123456"
+        let r = s.dropFirst()
+        XCTAssertEqual(r, "23456")
     }
     
     func testDropFirstN() {
@@ -131,6 +181,12 @@ class EmarcamTests: XCTestCase {
         let t = s.dropLast(3)
         XCTAssertEqual(s, "123456")
         XCTAssertEqual(t, "123")
+    }
+    
+    func testDropLast() {
+        let s = "123456"
+        let r = s.dropLast()
+        XCTAssertEqual(r, "12345")
     }
     
     // MARK: - Subscripting
