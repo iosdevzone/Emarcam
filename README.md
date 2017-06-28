@@ -40,3 +40,22 @@ ms1.removeSubrange(0...2)          // ms1 = "😀💀😀☠️☠️😡"
 ms1.remove(at: 1)                  // returns '💀' and ms1 = "😀😀☠️☠️😡"
 ms1.removeSubrange(2..<ms1.count)  // ms1 = ""😀😀"
 ````
+
+## Methods Backported to Swift 3
+Emarcam backports some Swift 4 goodness into Swift 3.
+### Drop
+```swift
+// MARK: - Non-mutating Removal (Backported)
+public func dropFirst() -> SubstringType
+public func dropFirst(_ n: Int) -> SubstringType
+public func dropLast() -> SubstringType
+public func dropLast(_ n: Int) -> SubstringType
+```
+### Remove
+```swift
+// MARK: - Mutating Removal (Backported)
+mutating func removeFirst() -> Character
+mutating func removeFirst(_ n: Int)
+mutating func removeLast(_ n: Int)
+mutating func removeLast() -> Character
+```
