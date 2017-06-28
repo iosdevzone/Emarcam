@@ -1,4 +1,5 @@
 # Emarcam
+[![Documentation](https://cdn.rawgit.com/iosdevzone/Emarcam/master/docs/badge.svg)]
 [![codecov](https://codecov.io/gh/iosdevzone/Emarcam/branch/master/graph/badge.svg)](https://codecov.io/gh/iosdevzone/Emarcam)
 [![Build Status](https://travis-ci.org/iosdevzone/Emarcam.svg?branch=master)](https://travis-ci.org/iosdevzone/Emarcam)
 ## Getting started
