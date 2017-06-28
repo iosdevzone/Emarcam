@@ -5,6 +5,10 @@ doc4:
 doc3:
 	jazzy -x -project,Emarcam_Swift_3.xcodeproj
 
+codecov:
+	swift package generate-xcodeproj --enable-code-coverage
+	xcodebuild -project Emarcam_Swift_3.xcodeproj -scheme Emarcam -enableCodeCoverage YES test
+
 spec_lint:
 	pod spec lint
 

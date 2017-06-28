@@ -17,7 +17,7 @@ script:
   - uname -a
   - swift build
   - swift test
-  - 
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then make codecov ; fi
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; bash <(curl -s https://codecov.io/bash); fi
