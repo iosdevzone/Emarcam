@@ -1,4 +1,5 @@
 # Emarcam
+[![codecov](https://codecov.io/gh/iosdevzone/Emarcam/branch/master/graph/badge.svg)](https://codecov.io/gh/iosdevzone/Emarcam)
 [![Build Status](https://travis-ci.org/iosdevzone/Emarcam.svg?branch=master)](https://travis-ci.org/iosdevzone/Emarcam)
 ## Getting started
 Assuming you have integrated `Emarcam` into your project using your preferred method (CococaPods, Carthage, Swift Package Manager or manually), just import the module at the top of your file.
