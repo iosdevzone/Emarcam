@@ -10,7 +10,6 @@
 		304CA4CD1EF212BB006E26B0 /* Emarcam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304CA4C31EF212BB006E26B0 /* Emarcam.framework */; };
 		30606A0B1EF3CE7B00F2E53A /* Emarcam.h in Headers */ = {isa = PBXBuildFile; fileRef = 30606A081EF3CE7B00F2E53A /* Emarcam.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30606A0C1EF3CE7B00F2E53A /* Emarcam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30606A091EF3CE7B00F2E53A /* Emarcam.swift */; };
-		30606A0D1EF3CE7B00F2E53A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30606A0A1EF3CE7B00F2E53A /* Info.plist */; };
 		30606A0F1EF3D15400F2E53A /* EmarcamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30606A0E1EF3D15400F2E53A /* EmarcamTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -182,7 +181,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30606A0D1EF3CE7B00F2E53A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

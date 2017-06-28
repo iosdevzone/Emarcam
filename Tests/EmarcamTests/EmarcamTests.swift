@@ -33,7 +33,8 @@ class EmarcamTests: XCTestCase {
     let testStrings = [
         "The quick brown fox jumped over the lazy dog.",
         "おやすみなさい",
-        "🇮🇪🇯🇵"]
+        "🇮🇪🇯🇵",
+        "私のホバークラフトはうなぎで満たされています。"]
     let insertion: Character = "🇺🇸"
     
     #if swift(>=4)
