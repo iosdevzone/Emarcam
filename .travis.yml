@@ -1,0 +1,8 @@
+language: swift
+
+os:
+  - osx
+
+script:
+  - swift build
+  - swift test
