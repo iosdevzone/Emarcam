@@ -24,3 +24,7 @@ test_swift_3:
 	sudo xcode-select -s /Applications/Xcode.app
 	xcrun swift --version
 	xcodebuild -project Emarcam_Swift_3.xcodeproj -scheme Emarcam -destination 'platform=OS X,arch=x86_64' test | xcpretty
+
+# Convenience target to generate list of all tests for Linux
+tests_list:
+	grep 'func test' Tests/EmarcamTests/EmarcamTests.swift | awk '{ print $$2; }' | sed 's/()//' | awk '{ print "(\""$$1"\", "$$1"), "}'

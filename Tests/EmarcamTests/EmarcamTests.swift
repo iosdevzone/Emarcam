@@ -24,9 +24,6 @@ class EmarcamTests: XCTestCase {
 	    ("testIndex",testIndex),
 	    ("testCountableClosedRange",testCountableClosedRange),
 	    ("testCountableRange",testCountableRange),
-//	    ("testPartialRangeUpTo",testPartialRangeUpTo),
-//	    ("testPartialRangeUpThrough",testPartialRangeUpThrough),
-//	    ("testPartialRangeFrom",testPartialRangeFrom)
 	    ]
 
 	}()
