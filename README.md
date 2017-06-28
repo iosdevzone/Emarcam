@@ -1,7 +1,9 @@
 # Emarcam
-[![Documentation](https://cdn.rawgit.com/iosdevzone/Emarcam/master/docs/badge.svg)]
+[![Documentation](https://cdn.rawgit.com/iosdevzone/Emarcam/master/docs/badge.svg)](https://cdn.rawgit.com/iosdevzone/Emarcam/master/docs/index.html)
 [![codecov](https://codecov.io/gh/iosdevzone/Emarcam/branch/master/graph/badge.svg)](https://codecov.io/gh/iosdevzone/Emarcam)
 [![Build Status](https://travis-ci.org/iosdevzone/Emarcam.svg?branch=master)](https://travis-ci.org/iosdevzone/Emarcam)
+[![Swift Version](https://img.shields.io/badge/Swift-3.1-F16D39.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift Version](https://img.shields.io/badge/Swift-4.0-F16D39.svg?style=flat)](https://developer.apple.com/swift)
 ## Getting started
 Assuming you have integrated `Emarcam` into your project using your preferred method (CococaPods, Carthage, Swift Package Manager or manually), just import the module at the top of your file.
 
